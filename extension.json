@@ -1,0 +1,25 @@
+{
+	"name": "RWTStuff",
+	"author": "Richard Todd",
+	"url": "https://github.com/rwtodd/RWTStuff.Mediawiki",
+	"description": "This is a collection of php stuff to extend my private wiki",
+	"version": "1.0",
+	"license-name": "MIT",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.39.0",
+		"platform": {
+			"php": ">= 8.1"
+		}
+	},
+	"AutoloadClasses": {
+		"RWTStuffHooks": "src/RWTStuffHooks.php"
+	},
+	"ExtensionMessagesFiles": {
+		"RWTStuffMagic": "RWTStuff.i18n.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "RWTStuffHooks::onParserFirstCallInit"
+	},
+	"manifest_version": 2
+}
